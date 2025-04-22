@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Blakely - Spanx Founder</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+        
+        :root {
+            --primary: #FF6B98;
+            --secondary: #5A287D;
+            --light: #FFF0F5;
+            --dark: #1E1E1E;
+            --accent: #FFD166;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            height: 80px;
+            margin-right: 20px;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero-image {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .hero-text {
+            max-width: 600px;
+            margin-left: 3rem;
+            text-align: left;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2:after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--primary);
+            margin: 10px auto;
+        }
+        
+        h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .trait-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .trait-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .trait-card h3 {
+            margin-top: 0;
+        }
+        
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .product-card {
+            width: 250px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            border-left: 5px solid var(--primary);
+            background: rgba(255,107,152,0.1);
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            margin: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--secondary);
+        }
+        
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .highlight {
+            color: var(--primary);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQyeNVLjZf6X1tc3xf0dTuJ5ZWZukmc0_deykbT17rnstHojbszXgYvNThMzVWK2Y64qM&usqp=CAU" alt="Spanx Logo" class="logo">
+            <h1>Sarah Blakely</h1>
+        </div>
+        <div class="hero">
+            <img src="https://cdn.britannica.com/21/232021-050-2E82C491/American-inventor-and-entrepreneur-Sara-Blakely-2019.jpg?w=385" alt="Sarah Blakely" class="hero-image">
+            <div class="hero-text">
+                <h3>Founder of Spanx</h3>
+                <p>From selling fax machines door-to-door to becoming the youngest self-made female billionaire, Sarah Blakely revolutionized women's shapewear with her innovative vision and relentless determination.</p>
+                <a href="#products" class="btn">Explore Spanx Products</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="about">
+            <h2>The Spanx Story</h2>
+            <p>Sarah Blakely founded <span class="highlight">Spanx</span> in 2000 after identifying a gap in the market for comfortable, slimming undergarments. With just <span class="highlight">$5,000 in savings</span>, no formal business training, and no outside investment, she turned her frustration with existing products into a billion-dollar business headquartered in <span class="highlight">Atlanta, Georgia</span>.</p>
+            
+            <div class="quote">
+                "Don't be intimidated by what you don't know. That can be your greatest strength and ensure that you do things differently from everyone else." — Sarah Blakely
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <p class="stat-number">$5K</p>
+                    <p class="stat-label">Initial Investment</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">$4M</p>
+                    <p class="stat-label">First Year Revenue</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">$1.2B</p>
+                    <p class="stat-label">Company Valuation</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">100%</p>
+                    <p class="stat-label">Ownership Retained</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="traits">
+            <h2>Entrepreneurial Qualities</h2>
+            <div class="traits-grid">
+                <div class="trait-card">
+                    <h3>Creativity & Innovation</h3>
+                    <p>Blakely identified a gap in the market and created a new product category by reimagining shapewear from ordinary pantyhose.</p>
+                </div>
+                <div class="trait-card">
+                    <h3>Resourcefulness</h3>
+                    <p>She started Spanx with minimal resources, managing all aspects of the business herself initially, including writing her own patent.</p>
+                </div>
+                <div class="trait-card">
+                    <h3>Persistence</h3>
+                    <p>Despite initial rejections from manufacturers and retailers, she persisted until Spanx gained traction through Oprah's endorsement.</p>
+                </div>
+                <div class="trait-card">
+                    <h3>Risk-taking</h3>
+                    <p>Blakely took significant personal and financial risks to launch her product without external funding or safety nets.</p>
+                </div>
+                <div class="trait-card">
+                    <h3>Confidence</h3>
+                    <p>She believed strongly in her product and her ability to succeed, which helped her overcome numerous obstacles.</p>
+                </div>
+                <div class="trait-card">
+                    <h3>Customer Focus</h3>
+                    <p>She designed Spanx to solve a real problem for women, focusing on comfort, functionality, and confidence.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="motivation">
+            <h2>Motivations Behind Spanx</h2>
+            <div class="traits-grid">
+                <div class="trait-card">
+                    <h3>Personal Frustration</h3>
+                    <p>Blakely was motivated by her own difficulty finding effective and comfortable shapewear to wear under white pants.</p>
+                </div>
+                <div class="trait-card">
+                    <h3>Desire for Independence</h3>
+                    <p>She wanted to create a business on her own terms without relying on traditional corporate paths.</p>
+                </div>
+                <div class="trait-card">
+                    <h3>Market Opportunity</h3>
+                    <p>Recognizing a large unmet need for better undergarments, she seized the opportunity to innovate in a stagnant industry.</p>
+                </div>
+                <div class="trait-card">
+                    <h3>Empowerment</h3>
+                    <p>Blakely aimed to help women feel confident and comfortable in their clothing, empowering them through her products.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="products">
+            <h2>Spanx Product Line</h2>
+            <p>From its original shapewear, Spanx has expanded to offer a complete range of solutions for women's wardrobe needs:</p>
+            
+            <div class="products">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHcKnJ9puCbBK9naVB6auRwjjIRwtcxIbV0g&s" alt="Spanx Shapewear" class="product-image">
+                    <div class="product-info">
+                        <h3>Signature Shapewear</h3>
+                        <p>The original product that started it all</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://rustans.com/cdn/shop/products/2563725_2563724_2563723_2563726_20202BLACK-1.jpg?v=1665974554&width=1400" alt="Spanx Leggings" class="product-image">
+                    <div class="product-info">
+                        <h3>Leggings</h3>
+                        <p>Comfortable and flattering everyday wear</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaQZrK3y8mmU6HteB4BejeuQeUheu9PZoWAA&s" alt="Spanx Swimwear" class="product-image">
+                    <div class="product-info">
+                        <h3>Swimwear</h3>
+                        <p>Confidence-boosting designs for the beach</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://spanx.ca/cdn/shop/products/3585201218b0a81bba6e77a15ff58bcc0f5013be_604x.jpg?v=1722626557" alt="Spanx Activewear" class="product-image">
+                    <div class="product-info">
+                        <h3>Activewear</h3>
+                        <p>Performance wear that shapes and supports</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="legacy">
+            <h2>A Lasting Legacy</h2>
+            <p>Sarah Blakely's entrepreneurial success with Spanx demonstrates how creativity, resourcefulness, and persistence can transform a simple idea into a billion-dollar business. Her journey highlights the importance of identifying real customer needs and having the confidence to pursue innovative solutions despite challenges.</p>
+            
+            <p>Beyond business success, Blakely has committed to philanthropy through the Spanx by Sara Blakely Foundation, supporting women through entrepreneurship, education, and the arts. She became the first woman to join "The Giving Pledge," committing to donate at least half her wealth to charity.</p>
+            
+            <p>Blakely's story continues to inspire entrepreneurs, especially women, to innovate and lead in their industries, proving that with vision and determination, anyone can reshape an industry.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <h3>Learn More About Sarah Blakely & Spanx</h3>
+        <div class="social-links">
+            <a href="#" class="social-icon">Instagram</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">Facebook</a>
+        </div>
+        <p>References:</p>
+        <p><a href="https://www.britannica.com/money/Sara-Blakely" style="color: var(--accent);">Britannica: Sara Blakely</a></p>
+        <p><a href="https://www.masterclass.com/articles/sara-blakely-founder-of-spanx" style="color: var(--accent);">Masterclass: Sara Blakely</a></p>
+        <p><a href="https://www.ceotodaymagazine.com/2021/10/how-spanx-founder-sara-blakely-created-a-billion-dollar-brand/" style="color: var(--accent);">CEO Today: Spanx Story</a></p>
+        <p>&copy; 2023 Spanx Inspired Website | Educational Project</p>
+    </footer>
+</body>
+</html>
